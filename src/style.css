@@ -113,7 +113,6 @@ body {
     left: 77px;
     height: 100vh;
     width: calc(100% - 77px);
-
 }
 
 .dashboard .top {
@@ -183,6 +182,10 @@ body {
     border: 0;
 }
 
+.dashboard .top button:active {
+    transform: scale(0.98);
+}
+
 .user {
     position: fixed;
     top: 0;
@@ -249,7 +252,7 @@ body {
     top: 7%;
     height: 100%;
     width: max-content;
-    left: 0%;
+    left: -22px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -266,20 +269,24 @@ body {
 }
 
 .main button {
-    position: fixed;
+    position: absolute;
     display: block;
-    top: 410px;
-    width: 13%;
+    top: 350px;
+    width: 30%;
     padding: 10px 5px;
     border-radius: 12px;
     color: var(--sidebar-color);
     cursor: pointer;
     font-size: 22px;
-    left: 22%;
+    left: 34%;
     outline: none;
     font-weight: 500;
     background: #FF7878;
     border: 0;
+}
+
+.main button:active {
+    transform: scale(0.98);
 }
 
 .main .svg {
@@ -294,8 +301,8 @@ body {
 .main .how {
     position: absolute;
     display: flex;
-    top: 500px;
-    left: 75px;
+    top: 460px;
+    left: 50px;
     height: 400px;
     width: 1300px;
 }
