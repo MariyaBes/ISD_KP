@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+@import url('https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css');
+
+*{
+    font-family: 'Montserrat', sans-serif; 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --body-color: #e4e9f7;
+    --sidebar-color: #fff;
+    --primary-color: #6424FD;
+    --primary-color-light: #707070;
+    --panel-color: #ffffff;
+    --text-color: #000;
+    --border-color: #c6c6c6;
+    --toggle-color: #ddd;
+
+    /*CALCULATOR*/
+    --light-body: #f3f8fe;
+    --light-main: #fdfdfd;
+    --light-second: #c3c2c8;
+    --light-hover: #edf0f5;
+    --light-text: #151426;
+
+    --shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+    /*Transition*/
+    --tran-02: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.4s ease;
+    --tran-05: all 0.5s ease;
+}
+ 
+.sidebar li {
+    align-items: center;
+    height: 45px;
+    margin-top: 32px;
+    list-style: none;
+    display: flex;
+}
+
+.sidebar li .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 38px;
+    font-size: 38px;
+    height: 50px;
+    width: 50px;
+    color: black;
+    padding: 10px;
+} 
+
+body {
+    background: var(--body-color);
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 75px;
+    padding: 10px 10px;
+    background: var(--body-color);
+    border-right: 1px solid var(--border-color);
+}
+
+.sidebar header .bur {
+    cursor: pointer;
+    padding: 7px 7px;
+    position: 50px;
+    height: 70px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    font-size: 42px;
+    flex-direction: column;
+}
+
+.sidebar li a {
+    height: 115%;
+    width: 115%;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 10px; 
+    transition: var(--tran-03);
+}
+ 
+.sidebar li a:hover {
+    padding: 4px 4px;
+    background: linear-gradient(to right, #6424FD, #8B5BFF);
+}
+
+.sidebar li a:hover .icon {
+    color: var(--sidebar-color);
+}
+
+.sidebar .menu-bar {
+    height: calc(100% - 75px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.dashboard {
+    position: relative;
+    background-color: var(--body-color);
+    left: 77px;
+    height: 100vh;
+    width: calc(100% - 77px);
+
+}
+
+.dashboard .top {
+    position: fixed;
+    left: 75px;
+    display: flex;
+    height: 7%;
+    width: 85%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--body-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.dashboard .top .sidebar-toggle {
+    padding: 0px 20px;
+    font-size: 50px;
+    color: var(--text-color);
+}
+
+.dashboard .top .search-box {
+    position: relative;
+    height: 45px;
+    width: 700px;
+    left: 8%;
+    max-width: 700px;
+}
+
+.top .search-box input {
+    height: 100%;
+    width: 100%;
+    border: 1px solid var(--border-color);
+    background-color: var(--panel-color);
+    padding: 0 10px 0 50px;
+    border-radius: 15px;
+    margin-left: 25px;
+    font-size: 15px;
+    font-weight: 500;
+    outline: none;
+}
+
+.top .search-box i {
+    position: absolute;
+    left: 15px;
+    margin-left: 25px;
+    z-index: 10;
+    font-size: 20px;
+    top: 50%;
+    transform: translateY(-40%);
+    color: var(--primary-color-light);
+}
+
+.dashboard .top button {
+    top: 50%;
+    width: 8%;
+    padding: 10px 5px;
+    border-radius: 12px;
+    color: var(--sidebar-color);
+    cursor: pointer;
+    display: block;
+    font-size: 20px;
+    margin: auto;
+    margin-left: 230px;
+    outline: none;
+    font-weight: 500;
+    background: linear-gradient(to right, #6424FD, #8B5BFF);
+    border: 0;
+}
+
+.user {
+    position: fixed;
+    top: 0;
+    right: 0%;
+    height: 100%;
+    width: 20%;
+    padding: 25px 25px;
+    background: var(--body-color);
+    border-left: 1px solid var(--border-color);
+}
+
+.user li {
+    position: absolute;
+    margin: auto;
+    display: flex;
+    left: 60%;
+    top: 1%;
+    height: 45px;
+    list-style: none;
+}
+
+.user li .icon {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    min-width: 24px;
+    font-size: 24px;
+    height: 50px;
+    width: 50px;
+    color: black;
+    padding: 10px;
+} 
+
+.user li a {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 25px;
+    text-decoration: none;
+    outline: none;
+    transition: var(--tran-05);
+}
+ 
+.user li a:hover {
+    padding: 2px 2px;
+    background: linear-gradient(to right, #6424FD, #8B5BFF);
+}
+
+.user li a:hover .icon {
+    color: var(--sidebar-color);
+}
+
+.user .image-push {
+    height: calc(100% - 75px);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.user .cal {
+    position: absolute;
+    top: 7%;
+    height: 100%;
+    width: max-content;
+    left: 0%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main {
+    position: absolute;
+    top: 7%;
+    left: 7%;
+    margin-bottom: 5%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main button {
+    position: fixed;
+    display: block;
+    top: 410px;
+    width: 13%;
+    padding: 10px 5px;
+    border-radius: 12px;
+    color: var(--sidebar-color);
+    cursor: pointer;
+    font-size: 22px;
+    left: 22%;
+    outline: none;
+    font-weight: 500;
+    background: #FF7878;
+    border: 0;
+}
+
+.main .svg {
+    position: absolute;
+    display: flex;
+    top: 80px;
+    height: 250px;
+    width: 250px;
+    left: -1%;
+}
+
+.main .how {
+    position: absolute;
+    display: flex;
+    top: 500px;
+    left: 75px;
+    height: 400px;
+    width: 1300px;
+}
+
+.main h1 {
+    position: absolute;
+    color: #FF4949;
+    top: 30px;
+    font-size: 70px;
+    left: 320px;
+    letter-spacing: 18px;
+    font-weight: 700;
+}
+
+.main h2 {
+    position: absolute;
+    top: 30px;
+    font-size: 70px;
+    left: 750px;
+    letter-spacing: 18px;
+    font-weight: 700;
+}
+
+.main h3 {
+    position: relative;
+    top: 110px;
+    left: 245px;
+    height: 140px;
+    width: 930px;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 5px;
+}
